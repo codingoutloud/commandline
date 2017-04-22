@@ -10,6 +10,11 @@
 * https://docs.microsoft.com/en-us/powershell/azure/install-azurerm-ps
 * https://docs.microsoft.com/en-us/cli/azure/install-azure-cli
 
+## Show Version:
+
+* Get-Module -ListAvailable -Name AzureRm.Resources | Select Version
+* 
+
 ## Doc:
 
 * https://docs.microsoft.com/en-us/powershell/azure/overview
@@ -33,7 +38,12 @@
 * Get-AzureRmVM
 * az vm list
 
-## Formatting Example
+## List Resource Groups
 
-* 
+* Get-AzureRmResource
+* az resource list 
+
+## Formatting Example for One Resource Group
+
+* Get-AzureRmResource | Select Name, Location, Kind | Format-Table -AutoSize
 * https://gist.github.com/codingoutloud/bca4ebf1bf28313acce29e3c84934108
